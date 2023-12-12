@@ -36,7 +36,7 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source1",
-				"source1 split(contains(['Yes'],cv),",
+				"source1 split(cv=='Yes',",
 				"     disjoint: false) ~> split1@(yes, no)",
 				"split1@yes sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
