@@ -6,7 +6,7 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "AzureSqlTable1",
+						"referenceName": "DelimitedText1",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -28,15 +28,14 @@
 			],
 			"scriptLines": [
 				"source(output(",
-				"          flag as string,",
-				"          folder as string,",
-				"          cv as string",
+				"          Flag as string,",
+				"          Folder as string,",
+				"          Time_added as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     isolationLevel: 'READ_UNCOMMITTED',",
-				"     format: 'table') ~> source1",
-				"source1 split(cv=='Yes',",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"source1 split(Flag=='Yes',",
 				"     disjoint: false) ~> split1@(yes, no)",
 				"split1@yes sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
