@@ -66,8 +66,7 @@
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Time_added",
-									"type": "String",
+									"name": "cv",
 									"physicalType": "varchar"
 								}
 							}
