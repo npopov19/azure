@@ -23,7 +23,7 @@
 			],
 			"transformations": [
 				{
-					"name": "parse1"
+					"name": "split1"
 				}
 			],
 			"scriptLines": [
@@ -36,9 +36,9 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source1",
-				"source1 parse(format: 'json',",
-				"     documentForm: 'singleDocument') ~> parse1",
-				"parse1 sink(allowSchemaDrift: true,",
+				"source1 split(contains(['Yes'],cv),",
+				"     disjoint: false) ~> split1@(yes, no)",
+				"split1@yes sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          flag as string,",
