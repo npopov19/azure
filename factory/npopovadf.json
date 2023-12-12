@@ -1,0 +1,9 @@
+{
+	"name": "npopovadf",
+	"location": "northeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "35179aa8-27c2-4ae7-a417-019de46c2965",
+		"tenantId": "93b01ec8-6544-4f01-a805-5ff9c13617dd"
+	}
+}
