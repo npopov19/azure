@@ -60,7 +60,12 @@
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink1",
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          flag = Flag,",
+				"          folder = Folder,",
+				"          cv = Time_added",
+				"     )) ~> sink1",
 				"split1@no sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
@@ -75,7 +80,11 @@
 				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError') ~> sink2"
+				"     errorHandlingOption: 'stopOnFirstError',",
+				"     mapColumn(",
+				"          flag = Flag,",
+				"          folder = Folder",
+				"     )) ~> sink2"
 			]
 		}
 	}
