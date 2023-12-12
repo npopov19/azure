@@ -38,11 +38,37 @@
 							{
 								"source": {
 									"name": "Flag",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "flag",
-									"type": "varchar"
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Folder",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "folder",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Time_added",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Time_added",
+									"type": "String",
+									"physicalType": "varchar"
 								}
 							}
 						],
