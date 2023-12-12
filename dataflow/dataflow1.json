@@ -23,9 +23,6 @@
 			],
 			"transformations": [
 				{
-					"name": "filter1"
-				},
-				{
 					"name": "parse1"
 				}
 			],
@@ -39,11 +36,12 @@
 				"     validateSchema: false,",
 				"     isolationLevel: 'READ_UNCOMMITTED',",
 				"     format: 'table') ~> source1",
-				"parse1 filter(contains([\"Nikolay\"],folder)) ~> filter1",
-				"source1 parse(folder = concat(folder,cv),",
-				"     format: 'json',",
-				"     documentForm: 'documentPerLine') ~> parse1",
-				"filter1 sink(allowSchemaDrift: true,",
+				"source1 parse(folder = cv ? string,",
+				"     format: 'delimited',",
+				"     columnNamesAsHeader: true,",
+				"     columnDelimiter: ',',",
+				"     nullValue: '') ~> parse1",
+				"parse1 sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     input(",
 				"          flag as string,",
