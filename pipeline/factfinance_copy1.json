@@ -5,14 +5,7 @@
 			{
 				"name": "factfinance",
 				"type": "Copy",
-				"dependsOn": [
-					{
-						"activity": "Delete2",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
+				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
@@ -170,7 +163,7 @@
 				"type": "Copy",
 				"dependsOn": [
 					{
-						"activity": "factfinance",
+						"activity": "Delete2",
 						"dependencyConditions": [
 							"Succeeded"
 						]
@@ -265,7 +258,14 @@
 			{
 				"name": "Delete2",
 				"type": "Delete",
-				"dependsOn": [],
+				"dependsOn": [
+					{
+						"activity": "factfinance",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
 				"policy": {
 					"timeout": "0.12:00:00",
 					"retry": 0,
