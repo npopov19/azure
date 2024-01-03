@@ -37,62 +37,98 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "ProductCategoryKey",
-									"type": "Int32",
-									"physicalType": "int"
+									"name": "FinanceKey",
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "ProductCategoryKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "ProductCategoryAlternateKey",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "ProductCategoryAlternateKey",
+									"name": "FinanceKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "EnglishProductCategoryName",
+									"name": "DateKey",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "EnglishProductCategoryName",
-									"type": "String",
-									"physicalType": "nvarchar"
+									"name": "DateKey",
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "SpanishProductCategoryName",
+									"name": "OrganizationKey",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "SpanishProductCategoryName",
-									"type": "String",
-									"physicalType": "nvarchar"
+									"name": "OrganizationKey",
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "FrenchProductCategoryName",
+									"name": "DepartmentGroupKey",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "String"
 								},
 								"sink": {
-									"name": "FrenchProductCategoryName",
+									"name": "DepartmentGroupKey",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "ScenarioKey",
 									"type": "String",
-									"physicalType": "nvarchar"
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ScenarioKey",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "AccountKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AccountKey",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "Amount",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Amount",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"source": {
+									"name": "Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Date",
+									"type": "DateTime",
+									"physicalType": "datetime"
 								}
 							}
 						],
@@ -105,13 +141,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "prod_category",
+						"referenceName": "FactFinance",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "tbl_ProductCategory",
+						"referenceName": "tbl_factFinance",
 						"type": "DatasetReference"
 					}
 				]
