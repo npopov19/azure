@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "load_product_category",
+				"name": "reseller",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -27,15 +27,9 @@
 						}
 					},
 					"sink": {
-						"type": "DelimitedTextSink",
-						"storeSettings": {
-							"type": "AzureBlobFSWriteSettings"
-						},
-						"formatSettings": {
-							"type": "DelimitedTextWriteSettings",
-							"quoteAllText": true,
-							"fileExtension": ".txt"
-						}
+						"type": "SqlServerSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": true
 					},
 					"enableStaging": false,
 					"translator": {
@@ -49,8 +43,8 @@
 								},
 								"sink": {
 									"name": "ResellerKey",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
@@ -61,8 +55,8 @@
 								},
 								"sink": {
 									"name": "GeographyKey",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
@@ -74,7 +68,7 @@
 								"sink": {
 									"name": "ResellerAlternateKey",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -86,7 +80,7 @@
 								"sink": {
 									"name": "Phone",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -98,7 +92,7 @@
 								"sink": {
 									"name": "BusinessType",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "varchar"
 								}
 							},
 							{
@@ -110,7 +104,7 @@
 								"sink": {
 									"name": "ResellerName",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -121,8 +115,8 @@
 								},
 								"sink": {
 									"name": "NumberEmployees",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
@@ -134,7 +128,7 @@
 								"sink": {
 									"name": "OrderFrequency",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "char"
 								}
 							},
 							{
@@ -145,8 +139,8 @@
 								},
 								"sink": {
 									"name": "OrderMonth",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Byte",
+									"physicalType": "tinyint"
 								}
 							},
 							{
@@ -157,8 +151,8 @@
 								},
 								"sink": {
 									"name": "FirstOrderYear",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
@@ -169,8 +163,8 @@
 								},
 								"sink": {
 									"name": "LastOrderYear",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
@@ -182,7 +176,7 @@
 								"sink": {
 									"name": "ProductLine",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -194,7 +188,7 @@
 								"sink": {
 									"name": "AddressLine1",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -206,7 +200,7 @@
 								"sink": {
 									"name": "AddressLine2",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -217,8 +211,10 @@
 								},
 								"sink": {
 									"name": "AnnualSales",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
@@ -230,7 +226,7 @@
 								"sink": {
 									"name": "BankName",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								}
 							},
 							{
@@ -241,8 +237,8 @@
 								},
 								"sink": {
 									"name": "MinPaymentType",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Byte",
+									"physicalType": "tinyint"
 								}
 							},
 							{
@@ -253,8 +249,10 @@
 								},
 								"sink": {
 									"name": "MinPaymentAmount",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
@@ -265,8 +263,10 @@
 								},
 								"sink": {
 									"name": "AnnualRevenue",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
@@ -277,8 +277,8 @@
 								},
 								"sink": {
 									"name": "YearOpened",
-									"type": "String",
-									"physicalType": "String"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							}
 						],
@@ -297,7 +297,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "reseller",
+						"referenceName": "tbl_DimReseller",
 						"type": "DatasetReference"
 					}
 				]
