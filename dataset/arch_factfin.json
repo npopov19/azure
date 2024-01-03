@@ -1,0 +1,59 @@
+{
+	"name": "arch_factfin",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "Archive"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "FactFinance.csv",
+				"fileSystem": "archive"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "FinanceKey",
+				"type": "String"
+			},
+			{
+				"name": "DateKey",
+				"type": "String"
+			},
+			{
+				"name": "OrganizationKey",
+				"type": "String"
+			},
+			{
+				"name": "DepartmentGroupKey",
+				"type": "String"
+			},
+			{
+				"name": "ScenarioKey",
+				"type": "String"
+			},
+			{
+				"name": "AccountKey",
+				"type": "String"
+			},
+			{
+				"name": "Amount",
+				"type": "String"
+			},
+			{
+				"name": "Date",
+				"type": "String"
+			}
+		]
+	}
+}
