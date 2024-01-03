@@ -5,10 +5,6 @@
 		"typeProperties": {
 			"sources": [
 				{
-					"dataset": {
-						"referenceName": "DelimitedText1",
-						"type": "DatasetReference"
-					},
 					"name": "source1"
 				}
 			],
@@ -17,10 +13,6 @@
 					"name": "sink1"
 				},
 				{
-					"dataset": {
-						"referenceName": "AzureSqlTable1_copy1",
-						"type": "DatasetReference"
-					},
 					"name": "sink2"
 				}
 			],
@@ -60,8 +52,7 @@
 				"          Time_added as string",
 				"     ),",
 				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
+				"     validateSchema: false) ~> source1",
 				"source1 split(Time_added=='Yes',",
 				"     disjoint: false) ~> split1@(yes, no)",
 				"split1@yes sort(asc(Flag, true)) ~> sort1",
@@ -95,23 +86,13 @@
 				"     format: 'table') ~> sink1",
 				"split1@no sink(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     input(",
-				"          flag as string,",
-				"          folder as string,",
-				"          cv as string",
-				"     ),",
-				"     deletable:false,",
-				"     insertable:true,",
-				"     updateable:false,",
-				"     upsertable:false,",
-				"     format: 'table',",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
-				"     errorHandlingOption: 'stopOnFirstError',",
 				"     mapColumn(",
 				"          flag = Flag,",
 				"          folder = Folder",
-				"     )) ~> sink2"
+				"     ),",
+				"     format: 'table') ~> sink2"
 			]
 		}
 	}
