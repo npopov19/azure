@@ -37,96 +37,236 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "ProductKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
 									"name": "FinanceKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ProductKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "OrderDateKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
 									"name": "DateKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OrderDateKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "DueDateKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
 									"name": "OrganizationKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "DueDateKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "ShipDateKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
 									"name": "DepartmentGroupKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ShipDateKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "CustomerKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
 									"name": "ScenarioKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "CustomerKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "PromotionKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
 									"name": "AccountKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "PromotionKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "CurrencyKey",
+									"name": "Amount",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "Amount",
+									"name": "CurrencyKey",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "Date",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SalesTerritoryKey",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"sink": {
+									"name": "SalesOrderNumber",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "SalesOrderLineNumber",
+									"type": "Byte",
+									"physicalType": "tinyint"
+								}
+							},
+							{
+								"sink": {
+									"name": "RevisionNumber",
+									"type": "Byte",
+									"physicalType": "tinyint"
+								}
+							},
+							{
+								"sink": {
+									"name": "OrderQuantity",
+									"type": "Int16",
+									"physicalType": "smallint"
+								}
+							},
+							{
+								"sink": {
+									"name": "UnitPrice",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								}
+							},
+							{
+								"sink": {
+									"name": "ExtendedAmount",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								}
+							},
+							{
+								"sink": {
+									"name": "UnitPriceDiscountPct",
 									"type": "Double",
 									"physicalType": "float"
 								}
 							},
 							{
-								"source": {
-									"name": "SalesTerritoryKey",
-									"type": "String",
-									"physicalType": "String"
-								},
 								"sink": {
-									"name": "Date",
+									"name": "DiscountAmount",
+									"type": "Double",
+									"physicalType": "float"
+								}
+							},
+							{
+								"sink": {
+									"name": "ProductStandardCost",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								}
+							},
+							{
+								"sink": {
+									"name": "TotalProductCost",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								}
+							},
+							{
+								"sink": {
+									"name": "SalesAmount",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								}
+							},
+							{
+								"sink": {
+									"name": "TaxAmt",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								}
+							},
+							{
+								"sink": {
+									"name": "Freight",
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
+								}
+							},
+							{
+								"sink": {
+									"name": "CarrierTrackingNumber",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "CustomerPONumber",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"sink": {
+									"name": "OrderDate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								}
+							},
+							{
+								"sink": {
+									"name": "DueDate",
+									"type": "DateTime",
+									"physicalType": "datetime"
+								}
+							},
+							{
+								"sink": {
+									"name": "ShipDate",
 									"type": "DateTime",
 									"physicalType": "datetime"
 								}
@@ -141,13 +281,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "internetfinance",
+						"referenceName": "internetsales",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "tbl_factFinance",
+						"referenceName": "tbl_internet_sales",
 						"type": "DatasetReference"
 					}
 				]
