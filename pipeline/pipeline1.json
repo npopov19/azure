@@ -50,7 +50,15 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"url": "https://prod-19.westus2.logic.azure.com:443/workflows/7b463a68e3e14516be9a5f9938a60274/triggers/manual/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=I16oKQb-3OiRSIS3ltmlfXIr4l4CVbwZYMREqvurjhM",
+					"method": "POST",
+					"body": {
+						"value": "@activity('Lookup1').output",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"folder": {
