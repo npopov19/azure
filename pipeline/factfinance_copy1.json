@@ -150,6 +150,46 @@
 						"type": "DatasetReference"
 					}
 				]
+			},
+			{
+				"name": "copy",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "factfinance",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "AzureBlobFSReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "dly_fact_fin",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {
