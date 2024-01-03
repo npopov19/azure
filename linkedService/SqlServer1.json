@@ -1,0 +1,12 @@
+{
+	"name": "SqlServer1",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=False;data source=migration-dwh2.database.windows.net;initial catalog=migration-dwh;user id=migrationadmin",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDVDMUEyREUzLTQ1QjAtNDhBOC04MDIxLTFDQjk3NDM4QzVDM181MjkxNzYxOS01MDI5LTQ2M2UtYmIwYi1lZGI4ZjA4ZDg1MTUiDQp9"
+		}
+	}
+}

@@ -1,0 +1,9 @@
+{
+	"name": "dfazlab",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "8bdbe756-378f-4e49-9012-24c3ff7dd252",
+		"tenantId": "66a9e805-12a0-4c2c-b7dd-117f763ffe92"
+	}
+}
