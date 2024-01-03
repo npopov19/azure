@@ -29,7 +29,7 @@
 					"sink": {
 						"type": "SqlServerSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": true
+						"sqlWriterUseTableLock": false
 					},
 					"enableStaging": false,
 					"translator": {
