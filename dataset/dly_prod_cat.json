@@ -1,35 +1,45 @@
 {
-	"name": "DelimitedText1",
+	"name": "dly_prod_cat",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "daily"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "CV_all.csv",
-				"folderPath": "a",
-				"fileSystem": "gen2npopovstorage"
+				"fileName": "DimProduct_Category_init.csv",
+				"fileSystem": "dailyload"
 			},
 			"columnDelimiter": ",",
-			"escapeChar": "\"",
+			"escapeChar": "\\",
 			"firstRowAsHeader": true,
 			"quoteChar": "\""
 		},
 		"schema": [
 			{
-				"name": "Flag",
+				"name": "ProductCategoryKey",
 				"type": "String"
 			},
 			{
-				"name": "Folder",
+				"name": "ProductCategoryAlternateKey",
 				"type": "String"
 			},
 			{
-				"name": "Time_added",
+				"name": "EnglishProductCategoryName",
+				"type": "String"
+			},
+			{
+				"name": "SpanishProductCategoryName",
+				"type": "String"
+			},
+			{
+				"name": "FrenchProductCategoryName",
 				"type": "String"
 			}
 		]
