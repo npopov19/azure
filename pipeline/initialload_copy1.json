@@ -37,62 +37,74 @@
 						"mappings": [
 							{
 								"source": {
+									"name": "ProductSubcategoryKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ProductSubcategoryKey",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "ProductSubcategoryAlternateKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ProductSubcategoryAlternateKey",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "EnglishProductSubcategoryName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "EnglishProductSubcategoryName",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "SpanishProductSubcategoryName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "SpanishProductSubcategoryName",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "FrenchProductSubcategoryName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FrenchProductSubcategoryName",
+									"type": "String",
+									"physicalType": "nvarchar"
+								}
+							},
+							{
+								"source": {
+									"name": "ProductCategoryKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
 									"name": "ProductCategoryKey",
 									"type": "Int32",
 									"physicalType": "int"
-								},
-								"sink": {
-									"name": "ProductCategoryKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "ProductCategoryAlternateKey",
-									"type": "Int32",
-									"physicalType": "int"
-								},
-								"sink": {
-									"name": "ProductCategoryAlternateKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "EnglishProductCategoryName",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "EnglishProductCategoryName",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "SpanishProductCategoryName",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "SpanishProductCategoryName",
-									"type": "String",
-									"physicalType": "nvarchar"
-								}
-							},
-							{
-								"source": {
-									"name": "FrenchProductCategoryName",
-									"type": "String",
-									"physicalType": "nvarchar"
-								},
-								"sink": {
-									"name": "FrenchProductCategoryName",
-									"type": "String",
-									"physicalType": "nvarchar"
 								}
 							}
 						],
@@ -105,13 +117,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "prod_category",
+						"referenceName": "prod_sub",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "tbl_ProductCategory",
+						"referenceName": "tbl_ProductSubCategory",
 						"type": "DatasetReference"
 					}
 				]
