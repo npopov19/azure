@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "load_product_category",
+				"name": "FactInternetSales",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {

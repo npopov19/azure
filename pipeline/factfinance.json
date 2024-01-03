@@ -1,9 +1,9 @@
 {
-	"name": "product_category_copy3",
+	"name": "factfinance",
 	"properties": {
 		"activities": [
 			{
-				"name": "load_product_category",
+				"name": "factfinance",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {

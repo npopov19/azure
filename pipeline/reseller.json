@@ -1,5 +1,5 @@
 {
-	"name": "product_category_copy2",
+	"name": "reseller",
 	"properties": {
 		"activities": [
 			{
@@ -40,6 +40,248 @@
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "ResellerKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ResellerKey",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "GeographyKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "GeographyKey",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ResellerAlternateKey",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ResellerAlternateKey",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "Phone",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Phone",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BusinessType",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BusinessType",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ResellerName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ResellerName",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "NumberEmployees",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "NumberEmployees",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OrderFrequency",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OrderFrequency",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "OrderMonth",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "OrderMonth",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "FirstOrderYear",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "FirstOrderYear",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "LastOrderYear",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "LastOrderYear",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "ProductLine",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "ProductLine",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AddressLine1",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AddressLine1",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AddressLine2",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AddressLine2",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AnnualSales",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AnnualSales",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "BankName",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "BankName",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MinPaymentType",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MinPaymentType",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "MinPaymentAmount",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "MinPaymentAmount",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "AnnualRevenue",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "AnnualRevenue",
+									"type": "String",
+									"physicalType": "String"
+								}
+							},
+							{
+								"source": {
+									"name": "YearOpened",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "YearOpened",
+									"type": "String",
+									"physicalType": "String"
+								}
+							}
+						],
 						"typeConversion": true,
 						"typeConversionSettings": {
 							"allowDataTruncation": true,
