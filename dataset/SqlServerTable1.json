@@ -1,5 +1,5 @@
 {
-	"name": "tblProductCategory",
+	"name": "SqlServerTable1",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",
@@ -12,31 +12,36 @@
 		"type": "SqlServerTable",
 		"schema": [
 			{
+				"name": "ProductSubcategoryKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "ProductSubcategoryAlternateKey",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "EnglishProductSubcategoryName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SpanishProductSubcategoryName",
+				"type": "nvarchar"
+			},
+			{
+				"name": "FrenchProductSubcategoryName",
+				"type": "nvarchar"
+			},
+			{
 				"name": "ProductCategoryKey",
 				"type": "int",
 				"precision": 10
-			},
-			{
-				"name": "ProductCategoryAlternateKey",
-				"type": "int",
-				"precision": 10
-			},
-			{
-				"name": "EnglishProductCategoryName",
-				"type": "nvarchar"
-			},
-			{
-				"name": "SpanishProductCategoryName",
-				"type": "nvarchar"
-			},
-			{
-				"name": "FrenchProductCategoryName",
-				"type": "nvarchar"
 			}
 		],
 		"typeProperties": {
 			"schema": "dbo",
-			"table": "DimProductCategory"
+			"table": "DimProductSubcategory"
 		}
 	}
 }
