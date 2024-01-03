@@ -291,7 +291,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "reseller",
+						"referenceName": "dly_reseller",
 						"type": "DatasetReference"
 					}
 				],
