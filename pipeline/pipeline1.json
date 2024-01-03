@@ -80,7 +80,7 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"storedProcedureName": "delete from dbo.SchemaLog;"
+					"storedProcedureName": "deleteschemalog"
 				},
 				"linkedServiceName": {
 					"referenceName": "SqlServer1",
