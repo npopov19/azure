@@ -3,7 +3,7 @@
 	"properties": {
 		"activities": [
 			{
-				"name": "Copy data1",
+				"name": "loadsubcateogry",
 				"type": "Copy",
 				"dependsOn": [],
 				"policy": {
@@ -130,7 +130,7 @@
 			}
 		],
 		"folder": {
-			"name": "New folder"
+			"name": "initload"
 		},
 		"annotations": []
 	}
