@@ -1,5 +1,5 @@
 {
-	"name": "SqlServerTable4",
+	"name": "tbl_InternetSales",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",

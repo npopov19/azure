@@ -117,7 +117,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "prod_sub",
+						"referenceName": "dly_sub_cat",
 						"type": "DatasetReference"
 					}
 				],

@@ -26,6 +26,11 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
+					"sink": {
+						"type": "SqlServerSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
@@ -33,269 +38,346 @@
 							{
 								"source": {
 									"name": "ProductKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "ProductKey",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "OrderDateKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "OrderDateKey",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "DueDateKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "DueDateKey",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "ShipDateKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "ShipDateKey",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "CustomerKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "CustomerKey",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "PromotionKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "PromotionKey",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "CurrencyKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "CurrencyKey",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "SalesTerritoryKey",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "SalesTerritoryKey",
-									"type": "Int32"
+									"type": "Int32",
+									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
 									"name": "SalesOrderNumber",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "SalesOrderNumber",
-									"type": "String"
+									"type": "String",
+									"physicalType": "nvarchar"
 								}
 							},
 							{
 								"source": {
 									"name": "SalesOrderLineNumber",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "SalesOrderLineNumber",
-									"type": "Byte"
+									"type": "Byte",
+									"physicalType": "tinyint"
 								}
 							},
 							{
 								"source": {
 									"name": "RevisionNumber",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "RevisionNumber",
-									"type": "Byte"
+									"type": "Byte",
+									"physicalType": "tinyint"
 								}
 							},
 							{
 								"source": {
 									"name": "OrderQuantity",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "OrderQuantity",
-									"type": "Int16"
+									"type": "Int16",
+									"physicalType": "smallint"
 								}
 							},
 							{
 								"source": {
 									"name": "UnitPrice",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "UnitPrice",
-									"type": "Decimal"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
 								"source": {
 									"name": "ExtendedAmount",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "ExtendedAmount",
-									"type": "Decimal"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
 								"source": {
 									"name": "UnitPriceDiscountPct",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "UnitPriceDiscountPct",
-									"type": "Double"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
 								"source": {
 									"name": "DiscountAmount",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "DiscountAmount",
-									"type": "Double"
+									"type": "Double",
+									"physicalType": "float"
 								}
 							},
 							{
 								"source": {
 									"name": "ProductStandardCost",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "ProductStandardCost",
-									"type": "Decimal"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
 								"source": {
 									"name": "TotalProductCost",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "TotalProductCost",
-									"type": "Decimal"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
 								"source": {
 									"name": "SalesAmount",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "SalesAmount",
-									"type": "Decimal"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
 								"source": {
 									"name": "TaxAmt",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "TaxAmt",
-									"type": "Decimal"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
 								"source": {
 									"name": "Freight",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "Freight",
-									"type": "Decimal"
+									"type": "Decimal",
+									"physicalType": "money",
+									"scale": 4,
+									"precision": 19
 								}
 							},
 							{
 								"source": {
 									"name": "CarrierTrackingNumber",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "CarrierTrackingNumber",
-									"type": "String"
+									"type": "String",
+									"physicalType": "nvarchar"
 								}
 							},
 							{
 								"source": {
 									"name": "CustomerPONumber",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "CustomerPONumber",
-									"type": "String"
+									"type": "String",
+									"physicalType": "nvarchar"
 								}
 							},
 							{
 								"source": {
 									"name": "OrderDate",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "OrderDate",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "datetime"
 								}
 							},
 							{
 								"source": {
 									"name": "DueDate",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "DueDate",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "datetime"
 								}
 							},
 							{
 								"source": {
 									"name": "ShipDate",
-									"type": "String"
+									"type": "String",
+									"physicalType": "String"
 								},
 								"sink": {
 									"name": "ShipDate",
-									"type": "DateTime"
+									"type": "DateTime",
+									"physicalType": "datetime"
 								}
 							}
-						]
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
 					}
 				},
 				"inputs": [
 					{
 						"referenceName": "dly_internetsales",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "tbl_InternetSales",
 						"type": "DatasetReference"
 					}
 				]
