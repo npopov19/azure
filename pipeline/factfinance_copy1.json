@@ -141,7 +141,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "FactFinance",
+						"referenceName": "dly_fact_fin",
 						"type": "DatasetReference"
 					}
 				],

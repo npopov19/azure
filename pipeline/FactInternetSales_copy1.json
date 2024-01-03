@@ -26,11 +26,6 @@
 							"type": "DelimitedTextReadSettings"
 						}
 					},
-					"sink": {
-						"type": "SqlServerSink",
-						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": true
-					},
 					"enableStaging": false,
 					"translator": {
 						"type": "TabularTranslator",
@@ -300,7 +295,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "FactInternetSales",
+						"referenceName": "dly_internetsales",
 						"type": "DatasetReference"
 					}
 				]
