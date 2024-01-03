@@ -16,20 +16,14 @@
 				"userProperties": [],
 				"typeProperties": {
 					"source": {
-						"type": "DelimitedTextSource",
-						"storeSettings": {
-							"type": "AzureBlobFSReadSettings",
-							"recursive": true,
-							"enablePartitionDiscovery": false
-						},
-						"formatSettings": {
-							"type": "DelimitedTextReadSettings"
-						}
+						"type": "SqlServerSource",
+						"queryTimeout": "02:00:00",
+						"partitionOption": "None"
 					},
 					"sink": {
 						"type": "SqlServerSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": false
+						"sqlWriterUseTableLock": true
 					},
 					"enableStaging": false,
 					"translator": {
@@ -37,238 +31,62 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "FinanceKey",
-									"type": "String",
-									"physicalType": "String"
+									"name": "ProductCategoryKey",
+									"type": "Int32",
+									"physicalType": "int"
 								},
 								"sink": {
-									"name": "ProductKey",
+									"name": "ProductCategoryKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "DateKey",
-									"type": "String",
-									"physicalType": "String"
+									"name": "ProductCategoryAlternateKey",
+									"type": "Int32",
+									"physicalType": "int"
 								},
 								"sink": {
-									"name": "OrderDateKey",
+									"name": "ProductCategoryAlternateKey",
 									"type": "Int32",
 									"physicalType": "int"
 								}
 							},
 							{
 								"source": {
-									"name": "OrganizationKey",
+									"name": "EnglishProductCategoryName",
 									"type": "String",
-									"physicalType": "String"
+									"physicalType": "nvarchar"
 								},
 								"sink": {
-									"name": "DueDateKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "DepartmentGroupKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "ShipDateKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "ScenarioKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "CustomerKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "AccountKey",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "PromotionKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "Amount",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "CurrencyKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"source": {
-									"name": "Date",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "SalesTerritoryKey",
-									"type": "Int32",
-									"physicalType": "int"
-								}
-							},
-							{
-								"sink": {
-									"name": "SalesOrderNumber",
+									"name": "EnglishProductCategoryName",
 									"type": "String",
 									"physicalType": "nvarchar"
 								}
 							},
 							{
+								"source": {
+									"name": "SpanishProductCategoryName",
+									"type": "String",
+									"physicalType": "nvarchar"
+								},
 								"sink": {
-									"name": "SalesOrderLineNumber",
-									"type": "Byte",
-									"physicalType": "tinyint"
-								}
-							},
-							{
-								"sink": {
-									"name": "RevisionNumber",
-									"type": "Byte",
-									"physicalType": "tinyint"
-								}
-							},
-							{
-								"sink": {
-									"name": "OrderQuantity",
-									"type": "Int16",
-									"physicalType": "smallint"
-								}
-							},
-							{
-								"sink": {
-									"name": "UnitPrice",
-									"type": "Decimal",
-									"physicalType": "money",
-									"scale": 4,
-									"precision": 19
-								}
-							},
-							{
-								"sink": {
-									"name": "ExtendedAmount",
-									"type": "Decimal",
-									"physicalType": "money",
-									"scale": 4,
-									"precision": 19
-								}
-							},
-							{
-								"sink": {
-									"name": "UnitPriceDiscountPct",
-									"type": "Double",
-									"physicalType": "float"
-								}
-							},
-							{
-								"sink": {
-									"name": "DiscountAmount",
-									"type": "Double",
-									"physicalType": "float"
-								}
-							},
-							{
-								"sink": {
-									"name": "ProductStandardCost",
-									"type": "Decimal",
-									"physicalType": "money",
-									"scale": 4,
-									"precision": 19
-								}
-							},
-							{
-								"sink": {
-									"name": "TotalProductCost",
-									"type": "Decimal",
-									"physicalType": "money",
-									"scale": 4,
-									"precision": 19
-								}
-							},
-							{
-								"sink": {
-									"name": "SalesAmount",
-									"type": "Decimal",
-									"physicalType": "money",
-									"scale": 4,
-									"precision": 19
-								}
-							},
-							{
-								"sink": {
-									"name": "TaxAmt",
-									"type": "Decimal",
-									"physicalType": "money",
-									"scale": 4,
-									"precision": 19
-								}
-							},
-							{
-								"sink": {
-									"name": "Freight",
-									"type": "Decimal",
-									"physicalType": "money",
-									"scale": 4,
-									"precision": 19
-								}
-							},
-							{
-								"sink": {
-									"name": "CarrierTrackingNumber",
+									"name": "SpanishProductCategoryName",
 									"type": "String",
 									"physicalType": "nvarchar"
 								}
 							},
 							{
-								"sink": {
-									"name": "CustomerPONumber",
+								"source": {
+									"name": "FrenchProductCategoryName",
 									"type": "String",
 									"physicalType": "nvarchar"
-								}
-							},
-							{
+								},
 								"sink": {
-									"name": "OrderDate",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								}
-							},
-							{
-								"sink": {
-									"name": "DueDate",
-									"type": "DateTime",
-									"physicalType": "datetime"
-								}
-							},
-							{
-								"sink": {
-									"name": "ShipDate",
-									"type": "DateTime",
-									"physicalType": "datetime"
+									"name": "FrenchProductCategoryName",
+									"type": "String",
+									"physicalType": "nvarchar"
 								}
 							}
 						],
@@ -281,13 +99,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "internetsales",
+						"referenceName": "tbl_ProductCategory",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "tbl_internet_sales",
+						"referenceName": "tbl_ProductCategory",
 						"type": "DatasetReference"
 					}
 				]
