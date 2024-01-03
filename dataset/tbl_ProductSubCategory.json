@@ -1,5 +1,5 @@
 {
-	"name": "SqlServerTable1",
+	"name": "tbl_ProductSubCategory",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "SqlServer1",
