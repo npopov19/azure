@@ -29,7 +29,7 @@
 					"sink": {
 						"type": "SqlServerSink",
 						"writeBehavior": "insert",
-						"sqlWriterUseTableLock": true
+						"sqlWriterUseTableLock": false
 					},
 					"enableStaging": false,
 					"translator": {
@@ -377,7 +377,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "tbl_internet_sales",
+						"referenceName": "tbl_InternetSales",
 						"type": "DatasetReference"
 					}
 				]
