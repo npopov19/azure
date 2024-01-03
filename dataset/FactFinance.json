@@ -1,5 +1,5 @@
 {
-	"name": "internetsales",
+	"name": "FactFinance",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
