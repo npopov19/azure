@@ -26,7 +26,14 @@
 			],
 			"transformations": [],
 			"scriptLines": [
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          ShiftID as short,",
+				"          Name as string,",
+				"          StartTime as string,",
+				"          EndTime as string,",
+				"          ModifiedDate as timestamp",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
 				"source1 sink(allowSchemaDrift: true,",
@@ -36,7 +43,14 @@
 				"     preCommands: [],",
 				"     postCommands: [],",
 				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true) ~> sink1"
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          ShiftID,",
+				"          Name,",
+				"          StartTime,",
+				"          EndTime,",
+				"          ModifiedDate",
+				"     )) ~> sink1"
 			]
 		}
 	}
