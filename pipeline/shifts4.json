@@ -1,5 +1,5 @@
 {
-	"name": "copyemployees_copy2",
+	"name": "shifts4",
 	"properties": {
 		"activities": [
 			{
@@ -135,13 +135,13 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "employees_csv",
+						"referenceName": "shifts",
 						"type": "DatasetReference"
 					}
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "DelimitedText3",
 						"type": "DatasetReference"
 					}
 				]

@@ -1,5 +1,5 @@
 {
-	"name": "copyemployees_copy1",
+	"name": "payhistory",
 	"properties": {
 		"activities": [
 			{
@@ -55,72 +55,36 @@
 							},
 							{
 								"source": {
-									"name": "NationalIDNumber",
+									"name": "RateChangeDate",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "NationalIDNumber",
+									"name": "RateChangeDate",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "LoginID",
+									"name": "Rate",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "LoginID",
+									"name": "Rate",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "OrganizationLevel",
+									"name": "PayFrequency",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "OrganizationLevel",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "JobTitle",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "JobTitle",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "MaritalStatus",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "MaritalStatus",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Shift",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "Shift",
+									"name": "PayFrequency",
 									"type": "String",
 									"physicalType": "String"
 								}
@@ -141,7 +105,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "DelimitedText2",
 						"type": "DatasetReference"
 					}
 				]
