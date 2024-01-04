@@ -1,5 +1,5 @@
 {
-	"name": "employees_csv_copy1",
+	"name": "employeepayhistory",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "FileServer1",
@@ -13,7 +13,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "FileServerLocation",
-				"fileName": "Employee.csv"
+				"fileName": "EmployeePayHistory.csv"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",

@@ -1,5 +1,5 @@
 {
-	"name": "pipeline2",
+	"name": "copyemployees",
 	"properties": {
 		"activities": [
 			{
@@ -15,8 +15,25 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"storeSettings": {
+							"type": "FileServerReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
 					"enableStaging": false
-				}
+				},
+				"inputs": [
+					{
+						"referenceName": "employees_csv",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"folder": {
