@@ -135,7 +135,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "employees_csv",
+						"referenceName": "employeepayhistory",
 						"type": "DatasetReference"
 					}
 				],
@@ -148,7 +148,7 @@
 			}
 		],
 		"folder": {
-			"name": "cdm"
+			"name": "vmcopyfiles"
 		},
 		"annotations": []
 	}
