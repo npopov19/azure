@@ -51,7 +51,8 @@
 				"          StartTime,",
 				"          EndTime,",
 				"          ModifiedDate",
-				"     )) ~> sink1"
+				"     ),",
+				"     partitionBy('hash', 1)) ~> sink1"
 			]
 		}
 	}
