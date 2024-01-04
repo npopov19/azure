@@ -1,5 +1,5 @@
 {
-	"name": "employees_csv",
+	"name": "employees_csv_copy2",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "FileServer1",
