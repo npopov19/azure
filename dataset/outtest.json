@@ -1,20 +1,17 @@
 {
-	"name": "containershifts",
+	"name": "outtest",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "AzureDataLakeStorage1",
 			"type": "LinkedServiceReference"
-		},
-		"folder": {
-			"name": "con_vm_files"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "shifts.csv",
-				"fileSystem": "cdm"
+				"fileName": "outtest.csv",
+				"fileSystem": "archive"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
