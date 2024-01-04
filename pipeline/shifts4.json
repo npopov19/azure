@@ -43,84 +43,60 @@
 						"mappings": [
 							{
 								"source": {
-									"name": "BusinessEntityID",
+									"name": "ShiftID",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "BusinessEntityID",
+									"name": "ShiftID",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "NationalIDNumber",
+									"name": "Name",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "NationalIDNumber",
+									"name": "Name",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "LoginID",
+									"name": "StartTime",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "LoginID",
+									"name": "StartTime",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "OrganizationLevel",
+									"name": "EndTime",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "OrganizationLevel",
+									"name": "EndTime",
 									"type": "String",
 									"physicalType": "String"
 								}
 							},
 							{
 								"source": {
-									"name": "JobTitle",
+									"name": "ModifiedDate",
 									"type": "String",
 									"physicalType": "String"
 								},
 								"sink": {
-									"name": "JobTitle",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "MaritalStatus",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "MaritalStatus",
-									"type": "String",
-									"physicalType": "String"
-								}
-							},
-							{
-								"source": {
-									"name": "Shift",
-									"type": "String",
-									"physicalType": "String"
-								},
-								"sink": {
-									"name": "Shift",
+									"name": "ModifiedDate",
 									"type": "String",
 									"physicalType": "String"
 								}
@@ -141,7 +117,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText3",
+						"referenceName": "containershifts",
 						"type": "DatasetReference"
 					}
 				]

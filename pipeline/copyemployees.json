@@ -141,7 +141,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText1",
+						"referenceName": "containeremployees",
 						"type": "DatasetReference"
 					}
 				]

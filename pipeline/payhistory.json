@@ -105,7 +105,7 @@
 				],
 				"outputs": [
 					{
-						"referenceName": "DelimitedText2",
+						"referenceName": "containerpayhist",
 						"type": "DatasetReference"
 					}
 				]
