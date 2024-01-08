@@ -103,7 +103,8 @@
 				"          ShiftName,",
 				"          LoginUserName,",
 				"          MartialStatus_Name,",
-				"          derived_Rate",
+				"          derived_Rate,",
+				"          RateChangeDate",
 				"     )) ~> sink1"
 			]
 		}
