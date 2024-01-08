@@ -81,7 +81,7 @@
 				"     broadcast: 'auto')~> lookup1",
 				"lookup1 derive(ShiftName = Name,",
 				"          LoginUserName = substring(LoginID,instr(LoginID,'\\\\')+1,length(LoginID)-instr(LoginID,'\\\\')),",
-				"          column1 = ERROR_FUNCTION('')) ~> derivedColumn1",
+				"          column1 = case(MaritalStatus=='M','Married','Single')) ~> derivedColumn1",
 				"derivedColumn1 sink(validateSchema: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
