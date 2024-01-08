@@ -83,7 +83,7 @@
 				"     asc(ShiftID, true),",
 				"     broadcast: 'auto')~> lookup1",
 				"lookup1 sink(allowSchemaDrift: true,",
-				"     validateSchema: false,",
+				"     validateSchema: true,",
 				"     format: 'delimited',",
 				"     columnDelimiter: ',',",
 				"     escapeChar: '\\\\',",
