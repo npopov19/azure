@@ -90,8 +90,7 @@
 				"     output: false,",
 				"     saveOrder: 1,",
 				"     mapColumn(",
-				"          BusinessEntityID = ShiftName,",
-				"          column1 = LoginUserName,",
+				"          BusinessEntityID,",
 				"          NationalIDNumber,",
 				"          LoginID,",
 				"          OrganizationLevel,",
@@ -102,7 +101,10 @@
 				"          Name,",
 				"          StartTime,",
 				"          EndTime,",
-				"          MartialStatus_Name = MaritalStatus",
+				"          ModifiedDate,",
+				"          ShiftName,",
+				"          LoginUserName,",
+				"          MartialStatus_Name",
 				"     )) ~> sink1"
 			]
 		}
