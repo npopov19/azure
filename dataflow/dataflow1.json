@@ -26,7 +26,7 @@
 						"referenceName": "containershifts",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "shiftsLookup"
 				}
 			],
 			"sinks": [
@@ -70,8 +70,8 @@
 				"     ),",
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
-				"Employees, source1 lookup(Shift == ShiftID,",
+				"     ignoreNoFilesFound: false) ~> shiftsLookup",
+				"Employees, shiftsLookup lookup(Shift == ShiftID,",
 				"     multiple: false,",
 				"     pickup: 'first',",
 				"     asc(ShiftID, true),",
