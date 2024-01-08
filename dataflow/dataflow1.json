@@ -89,7 +89,9 @@
 				"          OrganizationLevel,",
 				"          JobTitle,",
 				"          MaritalStatus,",
-				"          ShiftName = Name",
+				"          ShiftName = Name,",
+				"          each(match(concat('s',' ')),",
+				"               Jobtitleaa = $$)",
 				"     )) ~> sink1"
 			]
 		}
