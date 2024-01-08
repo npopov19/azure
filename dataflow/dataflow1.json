@@ -90,6 +90,7 @@
 				"     saveOrder: 1,",
 				"     mapColumn(",
 				"          BusinessEntityID,",
+				"          column1,",
 				"          NationalIDNumber,",
 				"          LoginID,",
 				"          OrganizationLevel,",
