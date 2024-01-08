@@ -37,6 +37,9 @@
 			"transformations": [
 				{
 					"name": "lookup1"
+				},
+				{
+					"name": "derivedColumn1"
 				}
 			],
 			"scriptLines": [
@@ -76,7 +79,9 @@
 				"     pickup: 'first',",
 				"     asc(ShiftID, true),",
 				"     broadcast: 'auto')~> lookup1",
-				"lookup1 sink(validateSchema: true,",
+				"lookup1 derive(BusinessEntityID = BusinessEntityID,",
+				"          column1 = ERROR_FUNCTION('substring(__SINGLE_QUOTE__aaaa__SINGLE_QUOTE__,__SINGLE_QUOTE__')) ~> derivedColumn1",
+				"derivedColumn1 sink(validateSchema: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
 				"     store: 'cache',",
@@ -96,7 +101,7 @@
 				"          StartTime,",
 				"          EndTime,",
 				"          ModifiedDate,",
-				"          each(match(ERROR_FUNCTION('')),",
+				"          each(patternMatch(`substring(\\'aaa.b\\', 0, 1)`),",
 				"               ERROR_FUNCTION('') = $$)",
 				"     )) ~> sink1"
 			]
