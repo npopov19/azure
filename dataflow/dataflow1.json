@@ -82,7 +82,21 @@
 				"     store: 'cache',",
 				"     format: 'inline',",
 				"     output: false,",
-				"     saveOrder: 1) ~> sink1"
+				"     saveOrder: 1,",
+				"     mapColumn(",
+				"          BusinessEntityID,",
+				"          NationalIDNumber,",
+				"          LoginID,",
+				"          OrganizationLevel,",
+				"          JobTitle,",
+				"          MaritalStatus,",
+				"          Shift,",
+				"          ShiftID,",
+				"          Name,",
+				"          StartTime,",
+				"          EndTime,",
+				"          ModifiedDate",
+				"     )) ~> sink1"
 			]
 		}
 	}
