@@ -29,7 +29,15 @@
 					"name": "source1"
 				}
 			],
-			"sinks": [],
+			"sinks": [
+				{
+					"linkedService": {
+						"referenceName": "AzureBlobStorage1",
+						"type": "LinkedServiceReference"
+					},
+					"name": "sink1"
+				}
+			],
 			"transformations": [
 				{
 					"name": "lookup1"
@@ -73,7 +81,32 @@
 				"     multiple: false,",
 				"     pickup: 'first',",
 				"     asc(ShiftID, true),",
-				"     broadcast: 'auto')~> lookup1"
+				"     broadcast: 'auto')~> lookup1",
+				"lookup1 sink(allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     format: 'delimited',",
+				"     columnDelimiter: ',',",
+				"     escapeChar: '\\\\',",
+				"     quoteChar: '\\\"',",
+				"     columnNamesAsHeader: false,",
+				"     skipDuplicateMapInputs: true,",
+				"     skipDuplicateMapOutputs: true,",
+				"     mapColumn(",
+				"          BusinessEntityID = Employees@BusinessEntityID,",
+				"          NationalIDNumber = Employees@NationalIDNumber,",
+				"          LoginID = Employees@LoginID,",
+				"          OrganizationLevel = Employees@OrganizationLevel,",
+				"          JobTitle = Employees@JobTitle,",
+				"          MaritalStatus = Employees@MaritalStatus,",
+				"          Shift = Employees@Shift,",
+				"          BusinessEntityID = source1@BusinessEntityID,",
+				"          NationalIDNumber = source1@NationalIDNumber,",
+				"          LoginID = source1@LoginID,",
+				"          OrganizationLevel = source1@OrganizationLevel,",
+				"          JobTitle = source1@JobTitle,",
+				"          MaritalStatus = source1@MaritalStatus,",
+				"          Shift = source1@Shift",
+				"     )) ~> sink1"
 			]
 		}
 	}
