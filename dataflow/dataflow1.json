@@ -86,12 +86,16 @@
 				"     mapColumn(",
 				"          BusinessEntityID,",
 				"          NationalIDNumber,",
+				"          LoginID,",
 				"          OrganizationLevel,",
 				"          JobTitle,",
 				"          MaritalStatus,",
-				"          ShiftName = Name,",
-				"          each(match(currentDate()),",
-				"               aaaaqa = $$)",
+				"          Shift,",
+				"          ShiftID,",
+				"          Name,",
+				"          StartTime,",
+				"          EndTime,",
+				"          ModifiedDate",
 				"     )) ~> sink1"
 			]
 		}
