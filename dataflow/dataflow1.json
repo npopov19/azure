@@ -90,8 +90,8 @@
 				"          JobTitle,",
 				"          MaritalStatus,",
 				"          ShiftName = Name,",
-				"          each(match(concat('s',' ')),",
-				"               Jobtitleaa = $$)",
+				"          each(match(currentDate()),",
+				"               aaaaqa = $$)",
 				"     )) ~> sink1"
 			]
 		}
