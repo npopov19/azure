@@ -80,7 +80,7 @@
 				"     asc(ShiftID, true),",
 				"     broadcast: 'auto')~> lookup1",
 				"lookup1 derive(BusinessEntityID = BusinessEntityID,",
-				"          column1 = substring('aaaa',1,1)) ~> derivedColumn1",
+				"          column1 = substring(LoginID,instr(LoginID,'\\\\')+1,length(LoginID)-instr(LoginID,'\\\\')-1)) ~> derivedColumn1",
 				"derivedColumn1 sink(validateSchema: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
