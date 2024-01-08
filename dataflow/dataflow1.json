@@ -95,7 +95,9 @@
 				"          Name,",
 				"          StartTime,",
 				"          EndTime,",
-				"          ModifiedDate",
+				"          ModifiedDate,",
+				"          each(match(ERROR_FUNCTION('')),",
+				"               ERROR_FUNCTION('') = $$)",
 				"     )) ~> sink1"
 			]
 		}
