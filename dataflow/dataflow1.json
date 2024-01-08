@@ -30,7 +30,11 @@
 				}
 			],
 			"sinks": [],
-			"transformations": [],
+			"transformations": [
+				{
+					"name": "lookup1"
+				}
+			],
 			"scriptLines": [
 				"source(output(",
 				"          ShiftID as short,",
@@ -51,9 +55,22 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> payhist",
-				"source(allowSchemaDrift: true,",
+				"source(output(",
+				"          BusinessEntityID as short,",
+				"          NationalIDNumber as integer,",
+				"          LoginID as string,",
+				"          OrganizationLevel as short,",
+				"          JobTitle as string,",
+				"          MaritalStatus as string,",
+				"          Shift as short",
+				"     ),",
+				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> Employees"
+				"     ignoreNoFilesFound: false) ~> Employees",
+				"Employees lookup(Shift == ERROR_FUNCTION(''),",
+				"     multiple: false,",
+				"     pickup: 'first',",
+				"     broadcast: 'auto')~> lookup1"
 			]
 		}
 	}
