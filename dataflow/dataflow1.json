@@ -40,6 +40,9 @@
 				},
 				{
 					"name": "derivedColumn1"
+				},
+				{
+					"name": "lookup2"
 				}
 			],
 			"scriptLines": [
@@ -74,7 +77,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> shiftsLookup",
-				"Employees, shiftsLookup lookup(Shift == ShiftID,",
+				"lookup2, shiftsLookup lookup(Shift == ShiftID,",
 				"     multiple: false,",
 				"     pickup: 'first',",
 				"     asc(ShiftID, true),",
@@ -83,6 +86,11 @@
 				"          LoginUserName = substring(LoginID,instr(LoginID,'\\\\')+1,length(LoginID)-instr(LoginID,'\\\\')),",
 				"          MartialStatus_Name = case(MaritalStatus=='M','Married','Single'),",
 				"          rate = ERROR_FUNCTION('')) ~> derivedColumn1",
+				"Employees, payhist lookup(Employees@BusinessEntityID == ERROR_FUNCTION(''),",
+				"     multiple: false,",
+				"     pickup: 'first',",
+				"     asc(ERROR_FUNCTION(''), true),",
+				"     broadcast: 'auto')~> lookup2",
 				"derivedColumn1 sink(validateSchema: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
