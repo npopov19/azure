@@ -23,7 +23,7 @@
 				},
 				{
 					"dataset": {
-						"referenceName": "shifts",
+						"referenceName": "containershifts",
 						"type": "DatasetReference"
 					},
 					"name": "source1"
@@ -61,16 +61,7 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> Employees",
-				"source(output(",
-				"          BusinessEntityID as string,",
-				"          NationalIDNumber as string,",
-				"          LoginID as string,",
-				"          OrganizationLevel as string,",
-				"          JobTitle as string,",
-				"          MaritalStatus as string,",
-				"          Shift as integer",
-				"     ),",
-				"     allowSchemaDrift: true,",
+				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> source1",
 				"Employees, source1 lookup(Employees@Shift == source1@Shift,",
