@@ -29,20 +29,8 @@
 					"name": "Employees"
 				}
 			],
-			"sinks": [
-				{
-					"dataset": {
-						"referenceName": "outtest",
-						"type": "DatasetReference"
-					},
-					"name": "sink1"
-				}
-			],
-			"transformations": [
-				{
-					"name": "lookup1"
-				}
-			],
+			"sinks": [],
+			"transformations": [],
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
@@ -52,29 +40,7 @@
 				"     ignoreNoFilesFound: false) ~> payhist",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> Employees",
-				"Employees, shifts lookup(ERROR_FUNCTION('') == ERROR_FUNCTION(''),",
-				"     multiple: false,",
-				"     pickup: 'first',",
-				"     asc(ERROR_FUNCTION(''), true),",
-				"     broadcast: 'auto')~> lookup1",
-				"shifts sink(allowSchemaDrift: true,",
-				"     validateSchema: true,",
-				"     partitionFileNames:['123.csv'],",
-				"     truncate: true,",
-				"     umask: 0770,",
-				"     preCommands: [],",
-				"     postCommands: [],",
-				"     skipDuplicateMapInputs: true,",
-				"     skipDuplicateMapOutputs: true,",
-				"     mapColumn(",
-				"          ShiftID,",
-				"          Name,",
-				"          StartTime,",
-				"          EndTime,",
-				"          ModifiedDate",
-				"     ),",
-				"     partitionBy('hash', 1)) ~> sink1"
+				"     ignoreNoFilesFound: false) ~> Employees"
 			]
 		}
 	}
