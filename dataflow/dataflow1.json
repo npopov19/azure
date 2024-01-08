@@ -94,7 +94,7 @@
 				"     mapColumn(",
 				"          BusinessEntityID = Employees@BusinessEntityID,",
 				"          NationalIDNumber = Employees@NationalIDNumber,",
-				"          LoginID = Employees@LoginID,",
+				"          {substr(LoginID,1,3)} = Employees@LoginID,",
 				"          OrganizationLevel = Employees@OrganizationLevel,",
 				"          JobTitle = Employees@JobTitle,",
 				"          MaritalStatus = Employees@MaritalStatus,",
