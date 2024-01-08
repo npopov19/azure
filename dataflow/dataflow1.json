@@ -9,13 +9,6 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "containershifts",
-						"type": "DatasetReference"
-					},
-					"name": "shifts"
-				},
-				{
-					"dataset": {
 						"referenceName": "containerpayhist",
 						"type": "DatasetReference"
 					},
@@ -37,16 +30,6 @@
 			],
 			"scriptLines": [
 				"source(output(",
-				"          ShiftID as short,",
-				"          Name as string,",
-				"          StartTime as string,",
-				"          EndTime as string,",
-				"          ModifiedDate as timestamp",
-				"     ),",
-				"     allowSchemaDrift: true,",
-				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> shifts",
-				"source(output(",
 				"          BusinessEntityID as short,",
 				"          RateChangeDate as timestamp,",
 				"          Rate as double,",
@@ -67,9 +50,10 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> Employees",
-				"Employees lookup(Shift == ERROR_FUNCTION(''),",
+				"Employees lookup(Shift == ShiftID,",
 				"     multiple: false,",
 				"     pickup: 'first',",
+				"     asc(ShiftID, true),",
 				"     broadcast: 'auto')~> lookup1"
 			]
 		}
