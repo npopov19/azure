@@ -80,7 +80,7 @@
 				"     asc(ShiftID, true),",
 				"     broadcast: 'auto')~> lookup1",
 				"lookup1 derive(BusinessEntityID = BusinessEntityID,",
-				"          column1 = ERROR_FUNCTION('substring(__SINGLE_QUOTE__aaaa__SINGLE_QUOTE__,__SINGLE_QUOTE__')) ~> derivedColumn1",
+				"          column1 = substring('aaaa',1,1)) ~> derivedColumn1",
 				"derivedColumn1 sink(validateSchema: true,",
 				"     skipDuplicateMapInputs: true,",
 				"     skipDuplicateMapOutputs: true,",
@@ -100,9 +100,7 @@
 				"          Name,",
 				"          StartTime,",
 				"          EndTime,",
-				"          ModifiedDate,",
-				"          each(patternMatch(`substring(\\'aaa.b\\', 0, 1)`),",
-				"               ERROR_FUNCTION('') = $$)",
+				"          ModifiedDate",
 				"     )) ~> sink1"
 			]
 		}
