@@ -86,7 +86,7 @@
 				"     mapColumn(",
 				"          BusinessEntityID,",
 				"          NationalIDNumber,",
-				"          LoginID,",
+				"          {} = LoginID,",
 				"          OrganizationLevel,",
 				"          JobTitle,",
 				"          MaritalStatus,",
