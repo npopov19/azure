@@ -20,6 +20,13 @@
 						"type": "DatasetReference"
 					},
 					"name": "Employees"
+				},
+				{
+					"dataset": {
+						"referenceName": "shifts",
+						"type": "DatasetReference"
+					},
+					"name": "source1"
 				}
 			],
 			"sinks": [],
@@ -50,7 +57,19 @@
 				"     allowSchemaDrift: true,",
 				"     validateSchema: false,",
 				"     ignoreNoFilesFound: false) ~> Employees",
-				"Employees lookup(Shift == ShiftID,",
+				"source(output(",
+				"          BusinessEntityID as string,",
+				"          NationalIDNumber as string,",
+				"          LoginID as string,",
+				"          OrganizationLevel as string,",
+				"          JobTitle as string,",
+				"          MaritalStatus as string,",
+				"          Shift as integer",
+				"     ),",
+				"     allowSchemaDrift: true,",
+				"     validateSchema: false,",
+				"     ignoreNoFilesFound: false) ~> source1",
+				"Employees, source1 lookup(Employees@Shift == source1@Shift,",
 				"     multiple: false,",
 				"     pickup: 'first',",
 				"     asc(ShiftID, true),",
