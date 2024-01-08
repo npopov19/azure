@@ -90,10 +90,7 @@
 				"          OrganizationLevel,",
 				"          JobTitle,",
 				"          MaritalStatus,",
-				"          ShiftName = Name,",
-				"          StartTime,",
-				"          EndTime,",
-				"          ModifiedDate",
+				"          ShiftName = Name",
 				"     )) ~> sink1"
 			]
 		}
