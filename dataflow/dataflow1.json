@@ -74,7 +74,7 @@
 				"Employees, source1 lookup(Shift == ShiftID,",
 				"     multiple: false,",
 				"     pickup: 'first',",
-				"     asc(ERROR_FUNCTION(''), true),",
+				"     asc(ShiftID, true),",
 				"     broadcast: 'auto')~> lookup1",
 				"lookup1 sink(validateSchema: true,",
 				"     skipDuplicateMapInputs: true,",
