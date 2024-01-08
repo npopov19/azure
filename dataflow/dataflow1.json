@@ -9,24 +9,24 @@
 			"sources": [
 				{
 					"dataset": {
-						"referenceName": "containerpayhist",
+						"referenceName": "containershifts",
 						"type": "DatasetReference"
 					},
-					"name": "source1"
+					"name": "shifts"
 				},
 				{
 					"dataset": {
 						"referenceName": "containerpayhist",
 						"type": "DatasetReference"
 					},
-					"name": "source2"
+					"name": "payhist"
 				},
 				{
 					"dataset": {
 						"referenceName": "containeremployees",
 						"type": "DatasetReference"
 					},
-					"name": "source3"
+					"name": "Employees"
 				}
 			],
 			"sinks": [
@@ -42,14 +42,14 @@
 			"scriptLines": [
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source1",
+				"     ignoreNoFilesFound: false) ~> shifts",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source2",
+				"     ignoreNoFilesFound: false) ~> payhist",
 				"source(allowSchemaDrift: true,",
 				"     validateSchema: false,",
-				"     ignoreNoFilesFound: false) ~> source3",
-				"source1 sink(allowSchemaDrift: true,",
+				"     ignoreNoFilesFound: false) ~> Employees",
+				"shifts sink(allowSchemaDrift: true,",
 				"     validateSchema: true,",
 				"     partitionFileNames:['123.csv'],",
 				"     truncate: true,",
