@@ -1,0 +1,58 @@
+2023/12/05 14:25:53 AzcopyVersion  10.20.1
+2023/12/05 14:25:53 OS-Environment  windows
+2023/12/05 14:25:53 OS-Architecture  amd64
+2023/12/05 14:25:53 Log times are in UTC. Local time is 5 Dec 2023 16:25:53
+2023/12/05 14:25:54 ISO 8601 START TIME: to copy files that changed before or after this job started, use the parameter --include-before=2023-12-05T14:25:48Z or --include-after=2023-12-05T14:25:48Z
+2023/12/05 14:25:55 WARN: Failed to check if the destination is a folder or a file (Azure Files). Assuming the destination is a file: -> github.com/Azure/azure-storage-file-go/azfile.newStorageError, C:/Users/VssAdministrator/go/pkg/mod/github.com/!azure/azure-storage-file-go@v0.6.1-0.20201111053559-3c1754dc00a5/azfile/zc_storage_error.go:42
+===== RESPONSE ERROR (ServiceCode=ResourceNotFound) =====
+Description=The specified resource does not exist.
+RequestId:0aaa6587-c01a-0024-4586-276702000000
+Time:2023-12-05T14:25:55.0006040Z, Details: 
+   Code: ResourceNotFound
+   GET https://gen2npopovstorage.file.core.windows.net/testcsv/CV_all.csv?restype=directory&se=2024-01-04t14%3A25%3A49z&sig=-REDACTED-&sp=rl&sr=s&sv=2023-01-03&timeout=901
+   User-Agent: [Microsoft Azure Storage Explorer, 1.32.1, win32, azcopy-node/3.1.0-rc.3 (win32)  AzCopy/10.20.1 Azure-Storage/0.8.0 (go1.19.12; Windows_NT)]
+   X-Ms-Allow-Trailing-Dot: [true]
+   X-Ms-Client-Request-Id: [e9c54efb-7b26-49e3-7729-4cacd2f3c56d]
+   X-Ms-Source-Allow-Trailing-Dot: [true]
+   X-Ms-Version: [2022-11-02]
+   --------------------------------------------------------------------------------
+   RESPONSE Status: 404 The specified resource does not exist.
+   Content-Length: [223]
+   Content-Type: [application/xml]
+   Date: [Tue, 05 Dec 2023 14:25:54 GMT]
+   Server: [Windows-Azure-File/1.0 Microsoft-HTTPAPI/2.0]
+   X-Ms-Client-Request-Id: [e9c54efb-7b26-49e3-7729-4cacd2f3c56d]
+   X-Ms-Error-Code: [ResourceNotFound]
+   X-Ms-Request-Id: [0aaa6587-c01a-0024-4586-276702000000]
+   X-Ms-Version: [2022-11-02]
+
+
+
+2023/12/05 14:25:55 Any empty folders will be processed, because source and destination both support folders. For the same reason, properties defined on folders will be processed
+2023/12/05 14:25:55 Job-Command copy https://gen2npopovstorage.file.core.windows.net/testcsv/CV_all.csv?se=2024-01-04t14%3A25%3A49z&sig=-REDACTED-&sp=rl&sr=s&sv=2023-01-03 C:\Users\NIKOLA~1.POP\AppData\Local\Temp\17017863492650\CV_all.csv --output-type=json --cancel-from-stdin --overwrite=prompt --check-md5 FailIfDifferent --from-to=FileLocal --preserve-smb-info=true --recursive --log-level=INFO --trailing-dot=Enable 
+2023/12/05 14:25:55 Number of CPUs: 12
+2023/12/05 14:25:55 Max file buffer RAM 6.000 GB
+2023/12/05 14:25:55 Max concurrent network operations:  will be dynamically tuned up to 3000 (Based on auto-tuning limit. Set AZCOPY_CONCURRENCY_VALUE environment variable to override)
+2023/12/05 14:25:55 Check CPU usage when dynamically tuning concurrency: true (Based on hard-coded default. Set AZCOPY_TUNE_TO_CPU environment variable to true or false override)
+2023/12/05 14:25:55 Max concurrent transfer initiation routines: 64 (Based on hard-coded default. Set AZCOPY_CONCURRENT_FILES environment variable to override)
+2023/12/05 14:25:55 Max enumeration routines: 16 (Based on hard-coded default. Set AZCOPY_CONCURRENT_SCAN environment variable to override)
+2023/12/05 14:25:55 Parallelize getting file properties (file.Stat): false (Based on AZCOPY_PARALLEL_STAT_FILES environment variable)
+2023/12/05 14:25:55 Max open files when downloading: 2147479959 (auto-computed)
+2023/12/05 14:25:55 Final job part has been created
+2023/12/05 14:25:55 Trying 4 concurrent connections (initial starting point)
+2023/12/05 14:25:55 Final job part has been scheduled
+2023/12/05 14:25:55 ==> REQUEST/RESPONSE (Try=1/154.0744ms, OpTime=526.0401ms) -- RESPONSE SUCCESSFULLY RECEIVED
+   GET https://gen2npopovstorage.file.core.windows.net/testcsv/CV_all.csv?se=2024-01-04T14%3A25%3A49Z&sig=-REDACTED-&sp=rl&sr=s&sv=2023-01-03&timeout=901
+   X-Ms-Request-Id: [a7bdf10f-701a-006c-0e86-277a35000000]
+
+2023/12/05 14:25:55 WARN: [P#0-T#0] https://gen2npopovstorage.file.core.windows.net/testcsv/CV_all.csv?se=2024-01-04T14%3A25%3A49Z&sig=-REDACTED-&sp=rl&sr=s&sv=2023-01-03 no MD5 was stored in the Blob/File service against this file. So the downloaded data cannot be MD5-validated. Dst: \\?\C:\Users\NIKOLA~1.POP\AppData\Local\Temp\17017863492650\CV_all.csv
+2023/12/05 14:25:55 ==> REQUEST/RESPONSE (Try=1/108.1246ms, OpTime=108.1246ms) -- RESPONSE SUCCESSFULLY RECEIVED
+   HEAD https://gen2npopovstorage.file.core.windows.net/testcsv/CV_all.csv?se=2024-01-04T14%3A25%3A49Z&sig=-REDACTED-&sp=rl&sr=s&sv=2023-01-03&timeout=901
+   X-Ms-Request-Id: [a7bdf112-701a-006c-0f86-277a35000000]
+
+2023/12/05 14:25:55 INFO: [P#0-T#0] DOWNLOADSUCCESSFUL: \\?\C:\Users\NIKOLA~1.POP\AppData\Local\Temp\17017863492650\CV_all.csv
+2023/12/05 14:25:55 JobID=75e794c8-3384-b84b-61ca-ed7baf40641d, Part#=0, TransfersDone=1 of 1
+2023/12/05 14:25:55 all parts of entire Job 75e794c8-3384-b84b-61ca-ed7baf40641d successfully completed, cancelled or paused
+2023/12/05 14:25:55 is part of Job which 1 total number of parts done 
+2023/12/05 14:25:57 PERF: primary performance constraint is Unknown. States: C:  0, R:  0, W:  0, F:  0, H:  0, B:  0, S:  0, P:  0, Q:  0, D:  0, E:  0, T:  0, GRs:  4
+2023/12/05 14:25:57 100.0 %, 1 Done, 0 Failed, 0 Pending, 0 Skipped, 1 Total, 2-sec Throughput (Mb/s): 0.0422

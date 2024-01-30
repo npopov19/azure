@@ -1,0 +1,446 @@
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" tag="stat_update" timestamp="1/28/2024 2:17:19 AM">
+	<outlinelistbox id="stat_outlinelistbox" updaterows="true" num_columns="2">
+		<listgroup id="group_connection_info">
+			<listrowcolumn label="Connection Information"/>
+			<listrow id="id_stat_state">
+				<listrowcolumn label="State:"/>
+				<listrowcolumn label="Disconnected"/>
+			</listrow>
+			<listrow id="id_tunnel_mode_v4">
+				<listrowcolumn label="Tunnel Mode (IPv4):"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_tunnel_mode_v6">
+				<listrowcolumn label="Tunnel Mode (IPv6):"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_tunnel_dyn_exc">
+				<listrowcolumn label="Dynamic Tunnel Exclusion:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_tunnel_dyn_inc">
+				<listrowcolumn label="Dynamic Tunnel Inclusion:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_time_connected">
+				<listrowcolumn label="Duration:"/>
+				<listrowcolumn label="00:00:00"/>
+			</listrow>
+			<listrow id="id_session_disconnect">
+				<listrowcolumn label="Session Disconnect:"/>
+				<listrowcolumn label="None"/>
+			</listrow>
+			<listrow id="id_stat_mgmt_tun_state">
+				<listrowcolumn label="Management Connection State:"/>
+				<listrowcolumn label="Disconnected (disabled)"/>
+			</listrow>
+		</listgroup>
+		<listgroup id="group_addr_info">
+			<listrowcolumn label="Address Information"/>
+			<listrow id="id_client_addr_ipv4">
+				<listrowcolumn label="Client (IPv4):"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_client_addr_ipv6">
+				<listrowcolumn label="Client (IPv6):"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_server_addr">
+				<listrowcolumn label="Server:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+		</listgroup>
+		<listgroup id="group_bytes">
+			<listrowcolumn label="Bytes"/>
+			<listrow id="id_bytes_sent">
+				<listrowcolumn label="Sent:"/>
+				<listrowcolumn label="0"/>
+			</listrow>
+			<listrow id="id_bytes_recv">
+				<listrowcolumn label="Received:"/>
+				<listrowcolumn label="0"/>
+			</listrow>
+		</listgroup>
+		<listgroup id="group_frames">
+			<listrowcolumn label="Frames"/>
+			<listrow id="id_frames_sent">
+				<listrowcolumn label="Sent:"/>
+				<listrowcolumn label="0"/>
+			</listrow>
+			<listrow id="id_frames_recv">
+				<listrowcolumn label="Received:"/>
+				<listrowcolumn label="0"/>
+			</listrow>
+		</listgroup>
+		<listgroup id="group_ctrl_frames">
+			<listrowcolumn label="Control Frames"/>
+			<listrow id="id_ctrl_frames_sent">
+				<listrowcolumn label="Sent:"/>
+				<listrowcolumn label="0"/>
+			</listrow>
+			<listrow id="id_ctrl_frames_recv">
+				<listrowcolumn label="Received:"/>
+				<listrowcolumn label="0"/>
+			</listrow>
+		</listgroup>
+		<listgroup id="group_client_mgmt">
+			<listrowcolumn label="Client Management"/>
+			<listrow id="id_admin_domain">
+				<listrowcolumn label="Administrative Domain:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_profile_name">
+				<listrowcolumn label="Profile Name:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+		</listgroup>
+		<listgroup id="group_transport_info">
+			<listrowcolumn label="Transport Information"/>
+			<listrow id="id_protocol">
+				<listrowcolumn label="Protocol:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_cipher">
+				<listrowcolumn label="Cipher:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_compression">
+				<listrowcolumn label="Compression:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_proxy_addr">
+				<listrowcolumn label="Proxy Address:"/>
+				<listrowcolumn label="No Proxy"/>
+			</listrow>
+		</listgroup>
+		<listgroup id="group_feature_config">
+			<listrowcolumn label="Feature Configuration"/>
+			<listrow id="id_fips_mode">
+				<listrowcolumn label="FIPS Mode:"/>
+				<listrowcolumn label="Disabled"/>
+			</listrow>
+			<listrow id="id_tnd_mode">
+				<listrowcolumn label="Trusted Network Detection:"/>
+				<listrowcolumn label="Enabled"/>
+			</listrow>
+			<listrow id="id_always_on_mode">
+				<listrowcolumn label="Always On:"/>
+				<listrowcolumn label="Disabled"/>
+			</listrow>
+		</listgroup>
+		<listgroup id="group_sms">
+			<listrowcolumn label="Secure Mobility Solution"/>
+			<listrow id="id_secure_mobility_soln_status">
+				<listrowcolumn label="Status:"/>
+				<listrowcolumn label="Unconfirmed"/>
+			</listrow>
+			<listrow id="id_secure_mobility_soln_appl">
+				<listrowcolumn label="Appliance:"/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+		</listgroup>
+	</outlinelistbox>
+	<outlinelistbox id="routes_outlinelistbox" updaterows="false" num_columns="1"/>
+	<outlinelistbox id="firewall_outlinelistbox" updaterows="false" num_columns="6">
+		<listhead>
+			<listheader label="Interface"/>
+			<listheader label="Permission"/>
+			<listheader label="Protocol"/>
+			<listheader label="Src Port"/>
+			<listheader label="Dst Port"/>
+			<listheader label="Destination Address"/>
+		</listhead>
+	</outlinelistbox>
+	<outlinelistbox id="overview_stat_outlinelistbox" updaterows="true" num_columns="2">
+		<listgroup id="group_vpn">
+			<listrowcolumn label="AnyConnect VPN (Disconnected)"/>
+			<listrow id="id_bytes_sent">
+				<listrowcolumn label="Bytes Sent: "/>
+				<listrowcolumn label="0"/>
+			</listrow>
+			<listrow id="id_bytes_recv">
+				<listrowcolumn label="Bytes Received: "/>
+				<listrowcolumn label="0"/>
+			</listrow>
+			<listrow id="id_time_connected">
+				<listrowcolumn label="Time Connected: "/>
+				<listrowcolumn label="00:00:00"/>
+			</listrow>
+			<listrow id="id_session_disconnect">
+				<listrowcolumn label="Session Disconnect: "/>
+				<listrowcolumn label="None"/>
+			</listrow>
+			<listrow id="id_tunnel_mode_v4">
+				<listrowcolumn label="Client Address (IPv4): "/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_tunnel_mode_v6">
+				<listrowcolumn label="Client Address (IPv6): "/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+			<listrow id="id_server_addr">
+				<listrowcolumn label="Server Address: "/>
+				<listrowcolumn label="Not Available"/>
+			</listrow>
+		</listgroup>
+	</outlinelistbox>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:19 AM">
+	<application show="true"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:19 AM" state="Attention">
+	<button id="simple_action_btn" label="Connect" disabled="true"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:19 AM">
+	<combobox id="simple_headend_combobox" disabled="true" editable="true">
+		<comboitem label="vpnbg.adastragrp.com" selected="true"/>
+	</combobox>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="popup">
+	<popup timestamp="1/28/2024 2:17:19 AM" id="credential_dialog" type="custom">
+		<title value="Cisco Secure Client | vpnbg.adastragrp.com"/>
+		<layout>
+			<row>
+				<label id="credential_prompt_header" value=""/>
+			</row>
+			<row>
+				<label id="group_list_lbl" value="Group:" disabled="false" hidden="false"/>
+				<combobox id="group_list" disabled="false" hidden="false" editable="false" audible="Group:" OnSelect="group_list_OnSelect" OnSelectID="group_list,username,password">
+					<comboitem label="AdastraBG" selected="true"/>
+					<comboitem label="AdastraSupport"/>
+				</combobox>
+			</row>
+			<row>
+				<label id="username_lbl" value="Username:" disabled="true" hidden="false"/>
+				<textbox id="username" value="Nikolay.Popov@adastragrp.com" disabled="true" hidden="false" maxlength="32" audible="Username:" OnPressEnter="username_OnPressEnter" OnPressEnterID="group_list,username,password"/>
+			</row>
+			<row>
+				<label id="password_lbl" value="Password:" disabled="false" hidden="false"/>
+				<passwordbox id="password" value="" disabled="false" hidden="false" maxlength="40" audible="Password:" focus="true" OnPressEnter="password_OnPressEnter" OnPressEnterID="group_list,username,password"/>
+			</row>
+			<row>
+				<button id="credential_ok_btn" label="OK" OnPress="credential_ok_btn_OnPress" OnPressID="group_list,username,password"/>
+				<button id="credential_cancel_btn" label="Cancel" OnPress="credential_cancel_btn_OnPress"/>
+			</row>
+		</layout>
+		<closebutton id="credential_close" OnClose="credential_close_OnClose"/>
+	</popup>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="popup">
+	<popup timestamp="1/28/2024 2:17:47 AM" id="credential_dialog" dispose="true"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:47 AM">
+	<log messagehistory="User credentials entered."/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:47 AM" state="Transition">
+	<traystate id="tray_state_string" value="Connecting"/>
+	<button id="stat_reset_btn" disabled="true"/>
+	<button id="simple_action_btn" label="Connect" tooltip="Connect" disabled="true"/>
+	<menuitem id="vpn_connect_toggle_menu_item" label="Connect" disabled="true"/>
+	<combobox id="simple_headend_combobox" disabled="true"/>
+	<checkbox id="UseStartBeforeLogon" disabled="true"/>
+	<checkbox id="AutomaticCertSelection" disabled="true"/>
+	<checkbox id="AutoConnectOnStart" disabled="true"/>
+	<checkbox id="MinimizeOnConnect" disabled="true"/>
+	<checkbox id="LocalLanAccess" disabled="true"/>
+	<checkbox id="DisableCaptivePortalDetection" disabled="true"/>
+	<checkbox id="ClearSmartcardPin" disabled="true"/>
+	<checkbox id="AutoReconnect" disabled="true"/>
+	<checkbox id="EnableAutomaticServerSelection" disabled="true"/>
+	<checkbox id="BlockUntrustedServers" disabled="true"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:47 AM">
+	<label id="simple_status" value="Establishing VPN session..." tooltip="Establishing VPN session..." sensitive="false"/>
+	<log messagehistory="Establishing VPN session..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:48 AM">
+	<label id="simple_status" value="The Cisco Secure Client - Downloader is performing update checks..." tooltip="The Cisco Secure Client - Downloader is performing update checks..." sensitive="false"/>
+	<log messagehistory="The Cisco Secure Client - Downloader is performing update checks..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:48 AM">
+	<label id="simple_status" value="Checking for profile updates..." tooltip="Checking for profile updates..." sensitive="false"/>
+	<log messagehistory="Checking for profile updates..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:49 AM">
+	<label id="simple_status" value="Checking for product updates..." tooltip="Checking for product updates..." sensitive="false"/>
+	<log messagehistory="Checking for product updates..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:49 AM">
+	<label id="simple_status" value="Checking for customization updates..." tooltip="Checking for customization updates..." sensitive="false"/>
+	<log messagehistory="Checking for customization updates..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:49 AM">
+	<label id="simple_status" value="Performing any required updates..." tooltip="Performing any required updates..." sensitive="false"/>
+	<log messagehistory="Performing any required updates..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:49 AM">
+	<label id="simple_status" value="The Cisco Secure Client - Downloader update checks have been completed." tooltip="The Cisco Secure Client - Downloader update checks have been completed." sensitive="false"/>
+	<log messagehistory="The Cisco Secure Client - Downloader update checks have been completed." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:49 AM">
+	<label id="simple_status" value="Establishing VPN - Initiating connection..." tooltip="Establishing VPN - Initiating connection..." sensitive="false"/>
+	<log messagehistory="Establishing VPN - Initiating connection..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:49 AM" state="Transition">
+	<button id="stat_reset_btn" disabled="true"/>
+	<button id="simple_action_btn" label="Connect" tooltip="Connect" disabled="true"/>
+	<menuitem id="vpn_connect_toggle_menu_item" label="Connect" disabled="true"/>
+	<combobox id="simple_headend_combobox" disabled="true"/>
+	<checkbox id="UseStartBeforeLogon" disabled="true"/>
+	<checkbox id="AutomaticCertSelection" disabled="true"/>
+	<checkbox id="AutoConnectOnStart" disabled="true"/>
+	<checkbox id="MinimizeOnConnect" disabled="true"/>
+	<checkbox id="LocalLanAccess" disabled="true"/>
+	<checkbox id="DisableCaptivePortalDetection" disabled="true"/>
+	<checkbox id="ClearSmartcardPin" disabled="true"/>
+	<checkbox id="AutoReconnect" disabled="true"/>
+	<checkbox id="EnableAutomaticServerSelection" disabled="true"/>
+	<checkbox id="BlockUntrustedServers" disabled="true"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:49 AM">
+	<label id="simple_status" value="Establishing VPN session..." tooltip="Establishing VPN session..." sensitive="false"/>
+	<log messagehistory="Establishing VPN session..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:50 AM">
+	<label id="simple_status" value="Establishing VPN - Examining system..." tooltip="Establishing VPN - Examining system..." sensitive="false"/>
+	<log messagehistory="Establishing VPN - Examining system..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:50 AM">
+	<label id="simple_status" value="Establishing VPN - Activating VPN adapter..." tooltip="Establishing VPN - Activating VPN adapter..." sensitive="false"/>
+	<log messagehistory="Establishing VPN - Activating VPN adapter..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:51 AM">
+	<label id="simple_status" value="Establishing VPN - Configuring system..." tooltip="Establishing VPN - Configuring system..." sensitive="false"/>
+	<log messagehistory="Establishing VPN - Configuring system..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:51 AM">
+	<label id="simple_status" value="Establishing VPN..." tooltip="Establishing VPN..." sensitive="false"/>
+	<log messagehistory="Establishing VPN..." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:51 AM" state="Good">
+	<traystate id="tray_state_string" value="Connected"/>
+	<button id="stat_reset_btn" disabled="false"/>
+	<button id="simple_action_btn" label="Disconnect" tooltip="Disconnect" disabled="false" focus="true"/>
+	<menuitem id="vpn_connect_toggle_menu_item" label="Disconnect" disabled="false"/>
+	<combobox id="simple_headend_combobox" disabled="true" editable="true">
+		<comboitem label="vpnbg.adastragrp.com" selected="true"/>
+	</combobox>
+	<application disableQuit="false"/>
+	<preferences>
+		<row>
+			<checkbox id="UseStartBeforeLogon" label="Start VPN before user logon to computer" checked="false" disabled="false" OnPress="UseStartBeforeLogon_OnPress" OnPressID="UseStartBeforeLogon"/>
+		</row>
+		<row>
+			<checkbox id="AutomaticCertSelection" label="Enable automatic certificate selection" checked="true" disabled="false" OnPress="AutomaticCertSelection_OnPress" OnPressID="AutomaticCertSelection"/>
+		</row>
+		<row>
+			<checkbox id="AutoConnectOnStart" label="Start VPN when Cisco Secure Client is started" checked="true" disabled="false" OnPress="AutoConnectOnStart_OnPress" OnPressID="AutoConnectOnStart"/>
+		</row>
+		<row>
+			<checkbox id="MinimizeOnConnect" label="Minimize Cisco Secure Client on VPN connect" checked="true" disabled="false" OnPress="MinimizeOnConnect_OnPress" OnPressID="MinimizeOnConnect"/>
+		</row>
+		<row>
+			<checkbox id="LocalLanAccess" label="Allow local (LAN) access when using VPN (if configured)" checked="true" disabled="false" OnPress="LocalLanAccess_OnPress" OnPressID="LocalLanAccess"/>
+		</row>
+		<row>
+			<checkbox id="DisableCaptivePortalDetection" label="Disable Captive Portal Detection" checked="false" disabled="false" OnPress="DisableCaptivePortalDetection_OnPress" OnPressID="DisableCaptivePortalDetection"/>
+		</row>
+		<row>
+			<checkbox id="ClearSmartcardPin" label="Do not remember SmartCard PIN" checked="true" disabled="false" OnPress="ClearSmartcardPin_OnPress" OnPressID="ClearSmartcardPin"/>
+		</row>
+		<row>
+			<checkbox id="AutoReconnect" label="Enable automatic VPN reconnect" checked="true" disabled="false" OnPress="AutoReconnect_OnPress" OnPressID="AutoReconnect"/>
+		</row>
+		<row>
+			<checkbox id="EnableAutomaticServerSelection" label="Enable automatic VPN server selection" checked="false" disabled="false" OnPress="EnableAutomaticServerSelection_OnPress" OnPressID="EnableAutomaticServerSelection"/>
+		</row>
+		<row>
+			<checkbox id="BlockUntrustedServers" label="Block connections to untrusted servers" checked="true" disabled="false" OnPress="BlockUntrustedServers_OnPress" OnPressID="BlockUntrustedServers"/>
+		</row>
+	</preferences>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="popup">
+	<popup timestamp="1/28/2024 2:17:51 AM" id="" type="notification" severity="info">
+		<text value="Connected: vpnbg.adastragrp.com" sensitive="false"/>
+	</popup>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:51 AM">
+	<application show="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:51 AM">
+	<label id="simple_status" value="Connected to vpnbg.adastragrp.com." tooltip="Connected to vpnbg.adastragrp.com." sensitive="false"/>
+	<log messagehistory="Connected to vpnbg.adastragrp.com." sensitive="false"/>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:51 AM" state="Good">
+	<button id="stat_reset_btn" disabled="false"/>
+	<button id="simple_action_btn" label="Disconnect" tooltip="Disconnect" disabled="false" focus="true"/>
+	<menuitem id="vpn_connect_toggle_menu_item" label="Disconnect" disabled="false"/>
+	<combobox id="simple_headend_combobox" disabled="true" editable="true">
+		<comboitem label="vpnbg.adastragrp.com" selected="true"/>
+	</combobox>
+	<application disableQuit="false"/>
+	<preferences>
+		<row>
+			<checkbox id="UseStartBeforeLogon" label="Start VPN before user logon to computer" checked="false" disabled="false" OnPress="UseStartBeforeLogon_OnPress" OnPressID="UseStartBeforeLogon"/>
+		</row>
+		<row>
+			<checkbox id="AutomaticCertSelection" label="Enable automatic certificate selection" checked="true" disabled="false" OnPress="AutomaticCertSelection_OnPress" OnPressID="AutomaticCertSelection"/>
+		</row>
+		<row>
+			<checkbox id="AutoConnectOnStart" label="Start VPN when Cisco Secure Client is started" checked="true" disabled="false" OnPress="AutoConnectOnStart_OnPress" OnPressID="AutoConnectOnStart"/>
+		</row>
+		<row>
+			<checkbox id="MinimizeOnConnect" label="Minimize Cisco Secure Client on VPN connect" checked="true" disabled="false" OnPress="MinimizeOnConnect_OnPress" OnPressID="MinimizeOnConnect"/>
+		</row>
+		<row>
+			<checkbox id="LocalLanAccess" label="Allow local (LAN) access when using VPN (if configured)" checked="true" disabled="false" OnPress="LocalLanAccess_OnPress" OnPressID="LocalLanAccess"/>
+		</row>
+		<row>
+			<checkbox id="DisableCaptivePortalDetection" label="Disable Captive Portal Detection" checked="false" disabled="false" OnPress="DisableCaptivePortalDetection_OnPress" OnPressID="DisableCaptivePortalDetection"/>
+		</row>
+		<row>
+			<checkbox id="ClearSmartcardPin" label="Do not remember SmartCard PIN" checked="true" disabled="false" OnPress="ClearSmartcardPin_OnPress" OnPressID="ClearSmartcardPin"/>
+		</row>
+		<row>
+			<checkbox id="AutoReconnect" label="Enable automatic VPN reconnect" checked="true" disabled="false" OnPress="AutoReconnect_OnPress" OnPressID="AutoReconnect"/>
+		</row>
+		<row>
+			<checkbox id="EnableAutomaticServerSelection" label="Enable automatic VPN server selection" checked="false" disabled="false" OnPress="EnableAutomaticServerSelection_OnPress" OnPressID="EnableAutomaticServerSelection"/>
+		</row>
+		<row>
+			<checkbox id="BlockUntrustedServers" label="Block connections to untrusted servers" checked="true" disabled="false" OnPress="BlockUntrustedServers_OnPress" OnPressID="BlockUntrustedServers"/>
+		</row>
+	</preferences>
+</acguiNotice>
+
+<acguiNotice module="com.cisco.anyconnect.presentation.vpn" type="update" timestamp="1/28/2024 2:17:51 AM">
+	<label id="simple_status" value="Connected to vpnbg.adastragrp.com." tooltip="Connected to vpnbg.adastragrp.com." sensitive="false"/>
+	<log messagehistory="Connected to vpnbg.adastragrp.com." sensitive="false"/>
+</acguiNotice>
+

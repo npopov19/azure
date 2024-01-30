@@ -1,0 +1,13 @@
+2023/12/05 14:25:54 AzcopyVersion  10.20.1
+2023/12/05 14:25:54 OS-Environment  windows
+2023/12/05 14:25:54 OS-Architecture  amd64
+2023/12/05 14:25:54 Log times are in UTC. Local time is 5 Dec 2023 16:25:54
+2023/12/05 14:25:55 ==> REQUEST/RESPONSE (Try=1/143.3442ms, OpTime=528.8287ms) -- RESPONSE SUCCESSFULLY RECEIVED
+   GET https://gen2npopovstorage.file.core.windows.net/testcsv/CV_all.csv?restype=directory&se=2024-01-04T14%3A25%3A49Z&sig=-REDACTED-&sp=rl&sr=s&sv=2023-01-03&timeout=901
+   X-Ms-Request-Id: [0aaa6587-c01a-0024-4586-276702000000]
+
+2023/12/05 14:25:55 ==> REQUEST/RESPONSE (Try=1/118.8983ms, OpTime=118.8983ms) -- RESPONSE SUCCESSFULLY RECEIVED
+   HEAD https://gen2npopovstorage.file.core.windows.net/testcsv/CV_all.csv?se=2024-01-04T14%3A25%3A49Z&sig=-REDACTED-&sp=rl&sr=s&sv=2023-01-03&timeout=901
+   X-Ms-Request-Id: [0aaa658a-c01a-0024-4686-276702000000]
+
+2023/12/05 14:25:57 Closing Log

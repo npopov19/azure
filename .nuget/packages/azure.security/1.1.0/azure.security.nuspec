@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+    <metadata>
+        <id>Azure.Security</id>
+        <version>1.1.0</version>
+        <title>Azure.Security</title>
+        <authors>christos.matskas</authors>
+        <owners>christos.matskas</owners>
+        <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+        <projectUrl>https://github.com/cmatskas/Azure.Security</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>The library provides the necessary encryption key management and protection using a combination of ssl certificates, blob and table storage in order to offer cryptographic services to Azure Websites</description>
+        <summary>A C# encryption implementation library specifically designed to work with Azure Websites and WebJobs</summary>
+        <tags>Azure, Security, Encryption, Cryptography, Secret, Key</tags>
+        <dependencies>
+            <dependency id="WindowsAzure.Storage" version="4.3.0" />
+        </dependencies>
+    </metadata>
+</package>
